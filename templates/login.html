@@ -1,0 +1,21 @@
+<div class="container center-align" style="max-width: 560px;padding-top: 20%;">
+    <div class="card defaultCard default-page-margin-top">
+        <div class="card-content">
+            <h3 style="color:#12c5a2;">飞吧</h3>
+            <div class="row default-separator">
+
+                <form class="input-field col s12 form-input" (ngSubmit)="loginSubmit()" #loginForm="ngForm">
+                    <div class="input-field col s12">
+                        <input id="number" type="number" [(ngModel)]="account" #acc="ngForm">
+                        <label for="number" data-error="错误" data-success="正确">账号</label>
+                    </div>
+                        <button type="submit"
+                           class="btn-large btn-rnd waves-effect waves-green-100 green font-green form-button" [class.disabled]="!loginForm.form.valid || !acc.dirty">
+                            登录
+                        </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
